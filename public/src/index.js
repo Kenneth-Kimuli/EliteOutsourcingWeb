@@ -40,9 +40,27 @@ const db = getFirestore(app);
       // ...
     }
   });*/
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
   /**
        * Handles the sign in button press.
-       */
+       
    function toggleSignIn() {
     if (auth.auth().currentUser) {
       auth.auth().signOut();
@@ -73,10 +91,11 @@ const db = getFirestore(app);
     }
     document.getElementById('quickstart-sign-in').disabled = true;
   }
+  */
 
   /**
    * Handles the sign up button press.
-   */
+   
   function handleSignUp() {
     var email = document.getElementById('cemail').value;
     var password = document.getElementById('password').value;
@@ -101,10 +120,11 @@ const db = getFirestore(app);
       console.log(error);
     });
   }
+  */
 
   /**
    * Sends an email verification to the user.
-   */
+   
   function sendEmailVerification() {
     auth.auth().currentUser.sendEmailVerification().then(function() {
       // Email Verification sent!
@@ -129,12 +149,13 @@ const db = getFirestore(app);
       console.log(error);
     });
   }
+  */
 
   /**
    * initApp handles setting up UI event listeners and registering Firebase auth listeners:
    *  - firebase.auth().onAuthStateChanged: This listener is called when the user is signed in or
    *    out, and that is where we update the UI.
-   */
+   
   function initApp() {
     // Listening for auth state changes.
     app.auth().onAuthStateChanged(function(user) {
@@ -172,3 +193,4 @@ const db = getFirestore(app);
   window.onload = function() {
     initApp();
   };
+  */

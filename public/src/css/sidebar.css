@@ -1,5 +1,5 @@
 body {
-  font-size: .875rem;
+  font-size: 1  rem;
 }
 
 .feather {
@@ -13,12 +13,12 @@ body {
  */
 
 .sidebar {
-  position:fixed;
+  position:absolute;
   top: 0;
   /* rtl:raw:
   right: 0;
   */
-  bottom: 0;
+  bottom: 400;
   /* rtl:remove */
   left: 0;
   z-index: 100; /* Behind the navbar */

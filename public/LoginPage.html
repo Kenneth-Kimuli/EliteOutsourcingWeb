@@ -1,4 +1,4 @@
- <!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
     
@@ -30,7 +30,7 @@
         <!-- Header-->
         <header class="bg-primary bg-gradient text-white">
             <div class="container px-4 text-center">
-                <h1 class="fw-bolder">Register your company to EliteOutsourcing</h1>
+                <h1 class="fw-bolder">Log In into your EliteOutsourcing account</h1>
                 <!--
                 <p class="lead">Create, Edit and Post a job</p>
                 <a class="btn btn-lg btn-light" href="#about">Start scrolling!</a>
@@ -42,32 +42,17 @@
 <section id="registerform" class="bg-dark text-white">
 <div class="container px-4">
   <div class="registerformdiv">
-    <p class="lead text-center fw-bolder">Fill out the form below to have your details entered into the system</p>
-<form target="_blank">
-    <label for="cname">Company Name:</label>
-  <input type="text" class="form-control mb-3" id="cname" name="cname" placeholder="Company X" required>
-    <label for="cid">Company ID:</label><br>
-  <input type="text" id="cid" class="form-control mb-3" name="cid" placeholder="12345678" required>
+    <p class="lead text-center fw-bolder">Fill out the form below to login into the system</p>
+<form target="">
     <label for="coemail">Company Email:</label><br>
   <input type="text" id="email" class="form-control mb-3" name="coemail" placeholder="CompanyX@gmail.com" autocomplete="off" required>
-    <label for="cphone">Company phone number:</label>
-  <input type="tel" id="cphone" class="form-control mb-3" name="cphone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{6}" placeholder="254-700-123456">
-    <label for="industry">Business Industry:</label><br>
-  <select id="cindustry" class="form-control mb-3" name="cindustry">
-    <option value="technology">Technology</option>
-    <option value="manufacturing">Manufacturing</option>
-    <option value="education">Education</option>
-    <option value="food">Food</option>
-    <option value="health care">Health Care</option>
-    <option value="transport">Transport</option>
-  </select>
     <label for="password">Password:</label><br>
   <input type="password" id="cpassword" class="form-control mb-5" name="password" placeholder="**********" required>
 <!-- <br><br> -->
-<button type="submit" id="signUp" class="btn btn-primary btn-lg btn-block border fw-bolder" style="width: 100%;">SUBMIT</button>
+<button type="submit" id="signUp" class="btn btn-primary btn-lg btn-block border fw-bolder" style="width: 100%;">LOGIN</button>
 <br>
 <br>  
-<p><h6><i>Already have an account? </i><a href="LoginPage.html"> Login Here</a>.</h6></p>
+<p><h6><i>Don't have an account?   </i><a href="CompanyRegistration.html"> Register Here</a>.</h6></p>
 </form> 
 </div>
 </div>
@@ -114,11 +99,9 @@ signUp.addEventListener('click',(e) => {
 
   var email = document.getElementById('email').value;
   var password = document.getElementById('cpassword').value;
-  var name = document.getElementById('cname').value;
   var id = document.getElementById('cid').value;
-  var industry = document.getElementById('cindustry').value;
 
-  createUserWithEmailAndPassword(auth, email, password)
+  /*createUserWithEmailAndPassword(auth, email, password)
   .then((userCredential) => {
     // Signed in 
     const user = userCredential.user;
@@ -133,7 +116,7 @@ signUp.addEventListener('click',(e) => {
 
     alert('company created');
     // redirect to another page(login)
-    window.location.href = "LoginPage.html";
+    window.location.href = "HomePage.html";
     //...
   })
   .catch((error) => {
@@ -142,7 +125,7 @@ signUp.addEventListener('click',(e) => {
 
     alert(errorMessage);
     // ..
-  });
+  });*/
 
 });
 
