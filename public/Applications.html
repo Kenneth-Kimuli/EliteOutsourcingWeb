@@ -16,6 +16,31 @@
 
 <body id="page-top">
     <!-- Navigation-->
+    <!--
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="indexCompany.html">EliteOutsourcing</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                    <li class="nav-item"><a class="nav-link" aria-current="page" href="Jobs.html">Jobs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Jobs_create.html">Create</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Stats.html">Stats</a></li>
+                </ul>
+                <form class="d-flex">
+                    <button class="btn btn-outline-light" type="submit">
+                        <i class="bi-cart-fill me-1"></i>
+                        Applications
+                        <span class="badge bg-darkorange text-white ms-1 rounded-pill" href="Applications.html">0</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    -->
+
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
         <div _ngcontent-ure-c8="" class="sb-sidenav-footer">
             <div _ngcontent-ure-c8="" class="small">Logged in as:</div>
@@ -28,8 +53,8 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="Jobs.html">Jobs</a></li>
-                    <li class="nav-item"><a class="nav-link" href="Jobs_create.html">Create</a></li>
-                    <li class="nav-item"><a class="nav-link" href="Stats.html">Stats</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Applications.html">Applications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Employees.html">Employees</a></li>
                 </ul>
                 <form class="d-flex">
                     <button class="btn btn-outline-light" type="submit" onclick="location.href='Applications.html'">
@@ -41,12 +66,13 @@
             </div>
         </div>
     </nav>
+
     <!-- Header-->
     <header class="bg-primary bg-gradient text-white">
         <div class="container px-4 text-center">
-            <h1 class="fw-bolder">JobView</h1>
-            <p class="lead">Create, Edit and Post a job</p>
-            <a class="btn btn-lg btn-light" href="Jobs_create.html">Post your Job!</a>
+            <h1 class="fw-bolder">ApplicationsView</h1>
+            <p class="lead">View Application Details, Applicant profile, Approve and Disapprove</p>
+            <a class="btn btn-lg btn-light" href="Applications.html">Refresh!</a>
         </div>
     </header>
 
@@ -55,9 +81,9 @@
 
         <div _ngcontent-ure-c20="" class="card-body">
             <div class="card mb-4" _ngcontent-ure-c12="">
-            <div _ngcontent-ure-c20="" class="card-header">All Jobs</div>
+            <div _ngcontent-ure-c20="" class="card-header">All Applications</div>
             <sb-ng-bootstrap-table _ngcontent-ure-c20="" _nghost-ure-c15="">
-                <form _ngcontent-ure-c15="" novalidate="" class="ng-untouched ng-pristine ng-valid"><br>
+                <form _ngcontent-ure-c15="" novalidate="" class="ng-untouched ng-pristine ng-valid">
                     <div _ngcontent-ure-c15="" class="form-group form-inline">Search: <input
                             _ngcontent-ure-c15="" class="form-control ml-2 ng-untouched ng-pristine ng-valid"
                             name="searchTerm" type="text">
@@ -68,31 +94,16 @@
                             <tr _ngcontent-ure-c15="">
                                 <th _ngcontent-ure-c15="" scope="col">#</th>
                                 <th _ngcontent-ure-c15="" sbsortable="name" scope="col"><span
-                                        _ngcontent-ure-c15="">Title</span>
+                                        _ngcontent-ure-c15="">Country</span>
                                     <!---->
                                 </th>
                                 <th _ngcontent-ure-c15="" sbsortable="area" scope="col"><span
-                                    _ngcontent-ure-c15="">Type</span>
-                                <!---->
-                                </th>
-                                <th _ngcontent-ure-c15="" sbsortable="area" scope="col"><span
-                                        _ngcontent-ure-c15="">Company</span>
+                                        _ngcontent-ure-c15="">Area</span>
                                     <!---->
                                 </th>
                                 <th _ngcontent-ure-c15="" sbsortable="population" scope="col"><span
-                                        _ngcontent-ure-c15="">Industry</span>
+                                        _ngcontent-ure-c15="">Population</span>
                                     <!---->
-                                </th><th _ngcontent-ure-c15="" sbsortable="area" scope="col"><span
-                                    _ngcontent-ure-c15="">Experience</span>
-                                <!---->
-                                </th>
-                                <th _ngcontent-ure-c15="" sbsortable="area" scope="col"><span
-                                    _ngcontent-ure-c15="">Description</span>
-                                <!---->
-                                </th>
-                                <th _ngcontent-ure-c15="" sbsortable="area" scope="col"><span
-                                    _ngcontent-ure-c15="">Salary</span>
-                                <!---->
                                 </th>
                             </tr>
                         </thead>

@@ -39,7 +39,7 @@ const db = getFirestore(app);
       console.log('logged out');
       // ...
     }
-  });*/
+  });
   //
   //
   //
