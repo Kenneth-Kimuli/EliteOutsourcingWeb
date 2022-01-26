@@ -15,7 +15,7 @@
 <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
             <div class="container px-4">
-                <a class="navbar-brand" href="#page-top">EliteOutsourcing</a>
+                <a class="navbar-brand" href="index.html">EliteOutsourcing</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <!--
                 <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -43,13 +43,13 @@
 <div class="container px-4">
   <div class="registerformdiv">
     <p class="lead text-center fw-bolder">Fill out the form below to login into the system</p>
-<form class="login" target="">
-    <label for="coemail">Company Email:</label><br>
-  <input type="text" id="email" class="form-control mb-3" name="coemail" placeholder="CompanyX@gmail.com" autocomplete="off" required>
+<form class="login">
+    <label for="email">Company Email:</label><br>
+  <input type="text" id="email" class="form-control mb-3" name="email" placeholder="CompanyX@gmail.com" autocomplete="off" required>
     <label for="password">Password:</label><br>
-  <input type="password" id="cpassword" class="form-control mb-5" name="password" placeholder="**********" required>
+  <input type="password" id="password" class="form-control mb-5" name="password" placeholder="**********" required>
 <!-- <br><br> -->
-<button type="submit" id="signIn" name="signIn" class="btn btn-primary btn-lg btn-block border fw-bolder" style="width: 100%;">LOGIN</button>
+<button type="submit" id="login" name="login" class="btn btn-primary btn-lg btn-block border fw-bolder" style="width: 100%;">LOGIN</button>
 <br>
 <br>  
 <p><h6><i>Don't have an account?   </i><a href="CompanyRegistration.html"> Register Here</a>.</h6></p>
@@ -95,8 +95,29 @@ const analytics = getAnalytics(app);
 const database = getDatabase(app);
 const auth = getAuth(app);
 
-const signIn = document.getElementById('signIn');
- if(signIn){
+const logIn = document.querySelector('.login')
+logIn.addEventListener('submit', (e) => {
+  e.preventDefault()
+
+  const email = logIn.email.value
+  const pwd = logIn.password.value
+
+  signInWithEmailAndPassword(auth, email, pwd )
+    .then((userCredential) => {
+      console.log('company logged in: ', userCredential.user)
+      alert('company logged in');
+        // redirect to another page(login)
+        window.location.href = "indexCompany.html";
+        //...
+    })
+    .catch((err) => {
+      console.log(err.message)
+    })
+})
+
+
+
+ /*if(signIn){
 signIn.addEventListener('click', (e) => {
   var email = document.getElementById('email').value;
   var password = document.getElementById('cpassword').value;
@@ -111,7 +132,7 @@ signIn.addEventListener('click', (e) => {
 
   alert('Log in Successful');
         // redirect to another page(login)
-  window.location.href = "public/indexCompany.html";
+  window.location.href = "indexCompany.html";
         //...
 })
   .catch((error) => {
@@ -121,7 +142,7 @@ signIn.addEventListener('click', (e) => {
     alert(errorMessage);
   });
     // [END auth_signin_password]
- }
+ }*/
 </script>
 
 </html> 
